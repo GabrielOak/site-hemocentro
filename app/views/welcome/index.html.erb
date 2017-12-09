@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Hemocentro</h1>
+<% if user_signed_in? %>
+<ul>
+  <li><%= current_user.email %></li>
+  <li><%= link_to "Sair", destroy_user_session_path, method: :delete %></li>
+</ul>
+
+<ul>
+  <li><%= link_to "Cadastrar Doador", new_donor_path %></li>
+  <li><%= link_to "Doadores", donors_path %></li>
+  <li><%= link_to "Usuarios", control_users_index_path %></li>
+</ul>
+
+<% else %>
+<ul>
+  <li><%= link_to "Cadastrar", new_user_registration_path %></li>
+  <li><%= link_to "Logar", new_user_session_path %></li>
+</ul>
+<% end %>

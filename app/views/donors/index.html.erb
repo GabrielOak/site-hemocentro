@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Donors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Idade</th>
+      <th>Email</th>
+      <th>Telefone</th>
+      <th>Cpf</th>
+      <th>Endereco</th>
+      <th>Tipo sanguineo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @donors.each do |donor| %>
+      <tr>
+        <td><%= donor.nome %></td>
+        <td><%= donor.idade %></td>
+        <td><%= donor.email %></td>
+        <td><%= donor.telefone %></td>
+        <td><%= donor.cpf %></td>
+        <td><%= donor.endereco %></td>
+        <td><%= donor.tipo_sanguineo %></td>
+        <td><%= link_to 'Show', donor %></td>
+        <td><%= link_to 'Edit', edit_donor_path(donor) %></td>
+        <td><%= link_to 'Destroy', donor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Donor', new_donor_path %>
