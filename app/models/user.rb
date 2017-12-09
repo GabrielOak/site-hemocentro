@@ -1,6 +1,5 @@
 class User < ApplicationRecord
 
-  has_one :donor
 
   enum role: [:normal_user, :admin]
   # Include default devise modules. Others available are:

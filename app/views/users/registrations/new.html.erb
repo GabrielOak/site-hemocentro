@@ -1,29 +1,42 @@
-<h2>Sign up</h2>
+<div class = "container">
+<h3>Cadastrar-se</h3>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :email %><br />
+<form class = "col s12">
+  <div class="row">
+    <div class="input-field col s6">
+    <%= f.label :email %>
     <%= f.email_field :email, autofocus: true %>
   </div>
+</div>
 
-  <div class="field">
+  <div class="row">
+    <div class="input-field col s6">
     <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
+</div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
+  <div class="row">
+    <div class="input-field col s6">
+    <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
+</div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+  <div>
+    <a class="waves-effect waves-light btn red "><%= f.submit "Cadastrar" %></a>
   </div>
-<% end %>
+<br>
+  <div>
+    <a class="waves-effect waves-light btn red " href = "/users/sign_in" >Entrar</a>
+  </div>
+<br>
+  <div>
+    <a class="waves-effect waves-light btn red " href = "/" >Voltar</a>
+  </div>
 
-<%= render "users/shared/links" %>
+  <% end %>
+</form>
+</div>

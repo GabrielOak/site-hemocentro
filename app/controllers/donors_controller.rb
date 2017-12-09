@@ -6,7 +6,7 @@ class DonorsController < ApplicationController
   # GET /donors.json
   def index
     @donors = Donor.all
-    authorize @donors
+    #authorize @donors
   end
 
   # GET /donors/1
