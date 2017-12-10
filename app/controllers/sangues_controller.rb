@@ -1,10 +1,11 @@
 class SanguesController < ApplicationController
   before_action :set_sangue, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /sangues
   # GET /sangues.json
   def index
     @sangues = Sangue.all
+    authorize @sangues
   end
 
   # GET /sangues/1

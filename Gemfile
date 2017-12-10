@@ -11,6 +11,8 @@ gem 'pundit'
 gem 'materialize-sass'
 gem 'material_icons'
 
+gem 'railroady'
+
 gem 'devise'
 
 gem 'pundit'

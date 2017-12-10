@@ -18,9 +18,9 @@
       <tr>
         <td><%= sangue.tipo %></td>
         <td><%= sangue.quantidade %></td>
-        <td><%= link_to 'Show', sangue %></td>
-        <td><%= link_to 'Edit', edit_sangue_path(sangue) %></td>
-        <td><%= link_to 'Destroy', sangue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', sangue %></td>
+        <td><%= link_to 'Editar', edit_sangue_path(sangue) %></td>
+        <td><%= link_to 'Deletar', sangue, method: :delete, data: { confirm: 'Tem certeza que deseja excluir?' } %></td>
       </tr>
     <% end %>
   </tbody>
