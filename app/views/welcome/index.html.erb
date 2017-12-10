@@ -1,21 +1,77 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Hemocentro</h1>
-<% if user_signed_in? %>
-<ul>
-  <li><%= current_user.email %></li>
-  <li><%= link_to "Sair", destroy_user_session_path, method: :delete %></li>
-</ul>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<meta charset="UTF-8">
+</head>
+<body>
 
-<ul>
-  <li><%= link_to "Cadastrar Doador", new_donor_path %></li>
-  <li><%= link_to "Doadores", donors_path %></li>
-  <li><%= link_to "Usuarios", control_users_index_path %></li>
-</ul>
+<div class = "center">
+	<h1><img src="Terceiro.jpg"></h1>
+</div>
 
-<% else %>
-<ul>
-  <li><%= link_to "Cadastrar", new_user_registration_path %></li>
-  <li><%= link_to "Logar", new_user_session_path %></li>
-</ul>
-<% end %>
+
+<div class = "container">
+
+ <h2><strong><em>Porque doar sangue?</em></strong></h2>
+
+ <p >O sangue é um tecido conjuntivo produzido pela medula óssea que
+    realiza várias funções no organismo. É composto por plasma, glóbulos brancos, glóbulos vermelhos, hemácias, plaquetas, sais, vitaminas, água e fatores de coagulação.
+
+    A doação de sangue consiste em um ato voluntário de permitir a retirada do seu próprio sangue para beneficiar as pessoas que necessitam receber sangue por qualquer motivo. Infelizmente ainda não foi encontrado nenhum substituto para o sangue, ou seja, é um tecido de extrema importância e valor, pois a sua ausência resulta em morte.
+
+    Para doar sangue o indivíduo preenche um cadastro com seus dados pessoais para que seja cadastrado como doador e ainda para que seja produzida sua carteira de doador. Após o cadastro o mesmo é levado até um profissional que irá verificar seu peso, batimentos cardíacos e pressão arterial. Depois é submetido a exames e à triagem clínica, onde responde perguntas importantes sobre sua condição física.
+
+    Depois de realizados todos os procedimentos necessários, o indivíduo que estiver apto a doar sangue é encaminhado à sala de coleta, onde são retirados 450 ml de sangue do seu braço. Após a doação um lanche é servido ao doador que precisará tomar muito líquido no decorrer do dia.
+
+    A bolsa que recebe o sangue retirado é encaminhada ao fracionamento, onde será separada em até quatro componentes (hemácias, plasmas, plaquetas e fatores de coagulação) que em seguida são levados ao local onde serão armazenados até que sua utilização seja necessária.
+
+    O indivíduo ao doar sangue não apresenta nenhuma manifestação corpórea. Os cuidados após a coleta são: evitar dobrar o braço pelo qual o sangue foi retirado, evitar esforço físico no dia da coleta, manter o curativo por até quatro horas, não fumar nas primeiras duas horas e não ingerir bebidas alcoólicas nas próximas doze horas.
+  </p>
+  </div>
+
+<div class = "container">
+  <h3>Tipos sanguíneos:</h3>
+
+  <table class="striped">
+        <thead>
+          <tr>
+              <td>A+</td>
+              <td>A-</td>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>B+</td>
+             <td>B-</td>
+            
+          </tr>
+           </tr>
+          <tr>
+            <td>AB+</td>
+            <td>AB-</td>
+            
+          </tr>
+          <tr>
+            <td>O+</td>
+             <td>O-</td>
+            
+          </tr>
+        </tbody>
+      </table>
+            </div>
+
+            <div class="container">
+
+<h3>Compatibilidade Sanguínea:</h3>
+
+<div class = "center"><img src="Relacoes.jpeg"></div>
+
+</div>
+</body>
+</html>
+
+
+ 

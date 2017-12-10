@@ -37,6 +37,7 @@
   <%= @donor.tipo_sanguineo %>
 </p>
 </table>
-<%= link_to 'Editar', edit_donor_path(@donor) %> |
-<%= link_to 'Voltar', donors_path %>
+ <span class="waves-effect red accent-3 btn"><%= link_to 'Editar', edit_donor_path(@donor) %></span> | <a class="waves-effect red accent-3 btn" href="/">Voltar</a>
 </div>
+
+<!-- <%= link_to 'Voltar', donors_path %> -->

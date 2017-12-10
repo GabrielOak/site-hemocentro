@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ep3</title>
+      <title>Hemocentro</title>
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +14,60 @@
   </head>
 
   <body>
-    <%= yield %>
-  </body>
+
+
+  <% if user_signed_in? %>
+  <% if current_user.admin? %>
+
+
+  <nav>
+    <div class="nav-wrapper red accent-3">
+      <a href="/welcome" class="brand-logo"> <i class="large material-icons">home</i></a>
+      <ul class="right hide-on-med-and-down">
+    
+        <li><%= link_to "Doadores", donors_path %></li>
+       <li><%= link_to "Usuarios", control_users_index_path %></li>
+        <li><%= link_to "Sair", destroy_user_session_path, method: :delete %></li>
+        <li><a href="/faq">FAQ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <%else%>
+
+    <nav>
+    <div class="nav-wrapper red accent-3">
+      <a href="/welcome" class="brand-logo"> <i class="large material-icons">home</i></a>
+      <ul class="right hide-on-med-and-down">
+       <li><%= link_to "Cadastrar Doador", new_donor_path %></li>
+        <li><%= link_to "Sair", destroy_user_session_path, method: :delete %></li>
+        <li><a href="/faq">FAQ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<% end %>
+    
+<% else %>
+
+  	<nav>
+    <div class="nav-wrapper red accent-3">
+      <a href="/welcome" class="brand-logo"> <i class="large material-icons">home</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/users/sign_up">Cadastro</a></li>
+        <li><a href="/users/sign_in">Login</a></li>
+        <li><a href="/faq">FAQ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<% end %>
+
+
+ <%= yield %>
+ 
+</body>
+
 </html>
+
