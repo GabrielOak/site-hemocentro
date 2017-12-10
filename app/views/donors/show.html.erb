@@ -1,5 +1,7 @@
+<div class = "container">
 <p id="notice"><%= notice %></p>
-
+<h3>Doador</h3>
+<table>
 <p>
   <strong>Nome:</strong>
   <%= @donor.nome %>
@@ -21,12 +23,12 @@
 </p>
 
 <p>
-  <strong>Cpf:</strong>
+  <strong>CPF:</strong>
   <%= @donor.cpf %>
 </p>
 
 <p>
-  <strong>Endereco:</strong>
+  <strong>Endereço:</strong>
   <%= @donor.endereco %>
 </p>
 
@@ -34,6 +36,7 @@
   <strong>Tipo sanguineo:</strong>
   <%= @donor.tipo_sanguineo %>
 </p>
-
-<%= link_to 'Edit', edit_donor_path(@donor) %> |
-<%= link_to 'Back', donors_path %>
+</table>
+<%= link_to 'Editar', edit_donor_path(@donor) %> |
+<%= link_to 'Voltar', donors_path %>
+</div>

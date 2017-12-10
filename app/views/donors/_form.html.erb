@@ -10,43 +10,54 @@
       </ul>
     </div>
   <% end %>
+<div class="row">
+<form class = "col s8">
+  <div class="row">
+    <div class="input-field col s6">
+      <%= form.label :nome %>
+      <%= form.text_field :nome, id: :donor_nome %>
+    </div>
 
-  <div class="field">
-    <%= form.label :nome %>
-    <%= form.text_field :nome, id: :donor_nome %>
+    <div class="input-field col s2">
+      <%= form.label :idade %>
+      <%= form.number_field :idade, id: :donor_idade %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :idade %>
-    <%= form.number_field :idade, id: :donor_idade %>
+  <div class="row">
+    <div class="input-field col s5">
+      <%= form.label :email %>
+      <%= form.text_field :email, id: :donor_email %>
+    </div>
+
+    <div class="input-field col s3">
+      <%= form.label :telefone %>
+      <%= form.text_field :telefone, id: :donor_telefone %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email, id: :donor_email %>
-  </div>
+  <div class="row">
+    <div class="input-field col s5">
+        <%= form.label :cpf %>
+        <%= form.text_field :cpf, id: :donor_cpf %>
+      </div>
 
-  <div class="field">
-    <%= form.label :telefone %>
-    <%= form.text_field :telefone, id: :donor_telefone %>
-  </div>
+      <div class="input-field col s3">
+        <%= form.label :tipo_sanguineo %>
+        <%= form.text_field :tipo_sanguineo, id: :donor_tipo_sanguineo %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :cpf %>
-    <%= form.text_field :cpf, id: :donor_cpf %>
-  </div>
+    <div class="row">
+      <div class="input-field col s8">
+        <%= form.label :endereco %>
+        <%= form.text_field :endereco, id: :donor_endereco %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :endereco %>
-    <%= form.text_field :endereco, id: :donor_endereco %>
+  <div>
+    <a class="waves-effect waves-light btn red "><%= form.submit %></a>
   </div>
-
-  <div class="field">
-    <%= form.label :tipo_sanguineo %>
-    <%= form.text_field :tipo_sanguineo, id: :donor_tipo_sanguineo %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+</form>
+</div
 <% end %>
