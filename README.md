@@ -10,10 +10,10 @@ Ezequiel Oliveira dos Reis - 16/0119316
 
 ## Como Utilizar
 
-É necessario ter os arquivos do projeto no seu computador, para isso de um clone do repositorio
+É necessário ter os arquivos do projeto no seu computador, para isso de um clone do repositório
 
 ```
-git clone -link do repositorio-  
+git clone -link do repositório-  
 ```
 
 ### Pré-requisitos
@@ -25,7 +25,7 @@ git clone -link do repositorio-
 
 ### Instalação
 
-É necessario a instalação das gems. Para isso, insira o seguinte código no terminal:
+É necessário a instalação das gems. Para isso, insira o seguinte código no terminal:
 
 ```
 bundle install
@@ -44,4 +44,37 @@ Para acessar o site, vá no seu navegador e insira:
 
 ```
 localhost:3000
+```
+
+## Permissão
+
+Para dar permissão para um usuário, é necessário utilizar o console do rails. Para isso, digite:
+
+```
+rails console
+```
+Após isso, digite o usuário que deseja colocar como administrador seguido de “.role = :admin”
+
+Exemplo:
+
+```
+User.first.role = :admin
+```
+
+ou
+
+```
+x = User.second
+x.role = :admin
+```
+
+depois disso, verifique se a alteração foi feita
+
+```
+User.first.role
+```
+se aparecer “admin”, a alteração foi feita. Agora, é necessário salvar
+
+```
+User.first.save
 ```
