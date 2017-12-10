@@ -1,10 +1,10 @@
 class DonorPolicy < ApplicationPolicy
+
+  def index?
+    user.admin?
+  end
+
   class Scope < Scope
-
-    def index?
-      user.admin?
-    end
-
     def resolve
       scope
     end
