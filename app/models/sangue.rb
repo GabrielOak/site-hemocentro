@@ -1,0 +1,2 @@
+class Sangue < ApplicationRecord
+end

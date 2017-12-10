@@ -1,0 +1,29 @@
+<%= form_with(model: sangue, local: true) do |form| %>
+  <% if sangue.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sangue.errors.count, "error") %> prohibited this sangue from being saved:</h2>
+
+      <ul>
+      <% sangue.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :tipo %>
+    <%= form.text_field :tipo, id: :sangue_tipo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantidade %>
+    <%= form.number_field :quantidade, id: :sangue_quantidade %>
+  </div>
+
+  <div class="actions">
+<span class="waves-effect red accent-3 btn">
+    <%= form.submit %>
+    </span>
+  </div>
+<% end %>

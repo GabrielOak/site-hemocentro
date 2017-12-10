@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @sangue.tipo %>
+</p>
+
+<p>
+  <strong>Quantidade:</strong>
+  <%= @sangue.quantidade %>
+</p>
+
+<span class="waves-effect red accent-3 btn"><%= link_to 'Edit', edit_sangue_path(@sangue) %></span> |
+<span class="waves-effect red accent-3 btn"><%= link_to 'Back', sangues_path %></span>

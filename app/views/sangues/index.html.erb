@@ -1,0 +1,32 @@
+
+
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+<h1>Sangues Disponiveis:</h1>
+
+<table class="striped">
+  <thead>
+    <tr>
+      <th>Tipos</th>
+      <th>Quantidade</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @sangues.each do |sangue| %>
+      <tr>
+        <td><%= sangue.tipo %></td>
+        <td><%= sangue.quantidade %></td>
+        <td><%= link_to 'Show', sangue %></td>
+        <td><%= link_to 'Edit', edit_sangue_path(sangue) %></td>
+        <td><%= link_to 'Destroy', sangue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<span class="waves-effect red accent-3 btn"><%= link_to 'New Sangue', new_sangue_path %></span>
+
+</div>

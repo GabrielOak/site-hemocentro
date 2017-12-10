@@ -23,9 +23,9 @@
 
   <nav>
     <div class="nav-wrapper red accent-3">
-      <a href="/welcome" class="brand-logo"> <i class="large material-icons">home</i></a>
+      <a class="brand-logo"><a href="/welcome" class="btn btn-floating btn-large red darken-2 pulse"><i class="material-icons ">home</i></a></a>
       <ul class="right hide-on-med-and-down">
-
+      <li><a href = "/sangues">Banco De Sangue</a></li>
         <li><%= link_to "Doadores", donors_path %></li>
        <li><%= link_to "Usuarios", control_users_index_path %></li>
         <li><%= link_to "Sair", destroy_user_session_path, method: :delete %></li>
@@ -39,7 +39,7 @@
 
     <nav>
     <div class="nav-wrapper red accent-3">
-      <a href="/welcome" class="brand-logo"> <i class="large material-icons">home</i></a>
+      <a class="brand-logo"><a href="/welcome" class="btn btn-floating btn-large red darken-2 pulse"><i class="material-icons ">home</i></a></a>
       <ul class="right hide-on-med-and-down">
        <li><%= link_to "Cadastrar Doador", new_donor_path %></li>
         <li><%= link_to "Sair", destroy_user_session_path, method: :delete %></li>
@@ -54,7 +54,7 @@
 
   	<nav>
     <div class="nav-wrapper red accent-3">
-      <a href="/welcome" class="brand-logo"> <i class="large material-icons">home</i></a>
+      <a class="brand-logo"><a href="/welcome" class="btn btn-floating btn-large red darken-2 pulse"><i class="material-icons ">home</i></a></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="/users/sign_up">Cadastro</a></li>
         <li><a href="/users/sign_in">Login</a></li>
